@@ -14,10 +14,15 @@
             <img src="images/slt.png" alt="SLT Logo" class="logo">
             <h1 class="program-title">Training Program</h1>
         </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav class="navbar-links">
             <a href="index.html">Home</a>
             <span>|</span>
-            <a href="#">About Us</a>
+            <a href="about.html">About Us</a>
             <span>|</span>
             <a href="vacancies.html">Vacancies</a>
             <span>|</span>
@@ -36,5 +41,12 @@
             <img src="images/about.png" alt="Team Image">
         </div>
     </section>
+
+    <script>
+        function toggleMenu() {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

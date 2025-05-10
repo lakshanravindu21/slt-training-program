@@ -18,6 +18,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 85, 162, 0.2);
+    gap: 40px;
 }
 
 /* Login Box */
@@ -153,11 +154,19 @@ form button:hover {
 /* Login Image */
 .login-image {
     margin-left: 40px;
+    width: 100%;
 }
 
 .login-image img {
-    width: 500px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for image when mouse is near */
+.login-image img:hover {
+    transform: scale(1.05);
 }
 
 /* Responsive Styles */
@@ -175,5 +184,24 @@ form button:hover {
     .login-image img {
         width: 80%;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .login-image img {
+        width: 100%;
     }
 }

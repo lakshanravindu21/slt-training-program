@@ -18,43 +18,51 @@ body {
 /* Header */
 header {
   background-color: #ffffff;
-  padding: 12px 25px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3mm; 
   border-bottom: 1px solid #e0e0e0;
   border-radius: 0 0 40px 40px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .logo img {
-  height: 30px;
+  height: 40px;
+  width: auto;
 }
 
 .logo span {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   color: #0066b3;
 }
 
 .nav-links a {
-  margin-left: 25px;
+  margin-left: 30px;
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #0066b3;
+  color: white;
 }
 
 /* Main layout */
 .main-content {
   display: flex;
-  height: 100%;
+  flex: 1;
 }
 
 /* Sidebar */
@@ -62,6 +70,7 @@ header {
   width: 220px;
   background-color: #0052a0;
   padding: 30px 10px;
+  min-height: calc(100vh - 100px);
 }
 
 .sidebar ul {
@@ -78,6 +87,8 @@ header {
   font-size: 16px;
   padding-left: 20px;
   position: relative;
+  display: block;
+  transition: color 0.3s ease;
 }
 
 .sidebar li.active a::before,
@@ -88,17 +99,24 @@ header {
   color: white;
 }
 
+.sidebar a:hover {
+  color: #ffd700;
+}
+
 /* Content Section */
 .content {
   flex: 1;
   padding: 40px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .search-box {
   position: absolute;
-  top: 3mm;
-  right: 5mm;
+  top: 30px;
+  right: 40px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -106,15 +124,14 @@ header {
   border-radius: 25px;
   padding: 4px 10px;
   box-shadow: inset 0 0 5px #ddd;
-  margin-bottom: 20px;
 }
 
 .search-box input {
   border: none;
   outline: none;
-  padding: 5px 10px;
+  padding: 6px 12px;
   font-size: 14px;
-  width: 180px;
+  width: 200px;
 }
 
 .search-box button {
@@ -129,39 +146,49 @@ header {
 
 .card {
   background-color: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 900px;
-  margin-top: 50px; /* space to avoid overlap with search box */
+  max-width: 1000px;
+  margin-top: 80px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h2 {
+  font-size: 24px;
+  color: #0052a0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 15px;
 }
 
 thead {
   background-color: #0052a0;
   color: white;
-  border-radius: 20px 20px 0 0;
 }
 
 thead th:first-child {
   border-top-left-radius: 20px;
-  overflow: hidden;
   border-bottom-left-radius: 20px;
 }
 
 thead th:last-child {
   border-top-right-radius: 20px;
-  overflow: hidden;
   border-bottom-right-radius: 20px;
 }
 
 th, td {
-  padding: 12px 15px;
+  padding: 14px 18px;
   text-align: left;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -172,4 +199,18 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
   background-color: #ffffff;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #0052a0;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.icon-btn:hover {
+  color: #003f7d;
 }

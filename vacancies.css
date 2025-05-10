@@ -1,146 +1,241 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("images/img.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
 }
 
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 0 0 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 40px;
+  border-radius: 0 0 20px 20px;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+  width: 80px;
+  height: auto;
 }
 
 .program-title {
-    font-weight: bold;
-    color: #004f9e;
-    font-size: 18px;
+  font-weight: bold;
+  color: #004f9e;
+  font-size: 22px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .nav-right a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 15px;
-    font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
+.nav-right a:hover {
+  background-color: #004f9e;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Form Container */
 .form-container {
-    max-width: 900px;
-    background: white;
-    margin: 30px auto;
-    padding: 30px 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 }
 
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #004f9e;
+}
+
+/* Form Elements */
 .application-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
 .form-group label {
-    flex: 0 0 200px;
-    font-weight: bold;
+  flex: 1 1 220px;
+  font-weight: bold;
 }
 
 .form-group input,
 .form-group select {
-    flex: 1;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
+  flex: 2 1 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-group input[type="date"] {
-    padding-right: 5px;
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #004f9e;
+  box-shadow: 0 0 6px rgba(0, 79, 158, 0.25);
+  outline: none;
+}
+
+.job-title {
+  background: #eef6ff;
+  padding: 12px 20px;
+  border-radius: 10px;
 }
 
 .static-text {
-    font-size: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #004f9e;
 }
 
 .full-width {
-    flex-direction: column;
-    align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .upload-box {
-    width: 100%;
-    height: 200px;
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #555;
-    font-size: 16px;
-    margin-top: 10px;
+  width: 100%;
+  height: 100px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
-.upload-box p {
-    margin-bottom: 8px;
+.upload-box:hover {
+  border-color: #004f9e;
+  background-color: #eef6ff;
 }
 
-.upload-box button {
-    margin-top: 8px;
-    padding: 8px 16px;
-    background-color: #fff;
-    border: 2px solid #0099ff;
-    color: #0099ff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.file-btn {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: white;
+  color: #004f9e;
+  border: 2px solid #004f9e;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  height: 10px;
+  line-height: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.upload-box button:hover {
-    background-color: #0099ff;
-    color: white;
+.file-btn input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
+.file-btn:hover {
+  background-color: #004f9e;
+  color: white;
+}
+
+/* Submit Button */
 .submit-button {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .submit-button button {
-    background-color: #004f9e;
-    color: white;
-    padding: 12px 50px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: #004f9e;
+  color: white;
+  padding: 14px 60px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button button:hover {
-    background-color: #0070e0;
+  background-color: #0072e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-right {
+    justify-content: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label,
+  .form-group input,
+  .form-group select {
+    width: 100%;
+  }
+
+  .submit-button button {
+    width: 100%;
+  }
 }
