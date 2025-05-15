@@ -61,19 +61,22 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
-    background: linear-gradient(to bottom right,#0E1338, #003B73);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
+    background-image: url("images/mobitelimage.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     border-radius: 0px;
-    margin: 20px 0;
 }
 
 .hero-section img {
     width: 100px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .hero-section h1 {
@@ -84,6 +87,7 @@ body {
 .hero-section p {
     font-size: 24px;
 }
+
 
 /* Cards */
 .card-row {
